@@ -14,8 +14,11 @@ visited across trials measures the multimodality of the policy
 first, 4.0 a uniform spread over all four).
 
 The simulator dynamics and task logic are based on the multimodal ant
-environment released with VQ-BeT's `envs/antenv`, ported to gymnasium and the
-modern `mujoco` bindings. The simulator code is vendored under `ant_sim/`.
+environment released with
+[VQ-BeT](https://github.com/jayLEE0301/vq_bet_official/tree/main/envs/antenv)
+([Behavior Generation with Latent Actions](https://arxiv.org/abs/2403.03181),
+Lee et al., 2024), ported to gymnasium and the modern `mujoco` bindings. The
+simulator code is vendored under `ant_sim/`.
 The `versatil_inference/` package is only the environment-side wrapper. The
 policy client lives in the VersatIL codebase and is run with
 `python -m versatil.endpoints.deploy`.
@@ -96,3 +99,16 @@ Per-trial results, rollout videos (`--record_video true`), torso trajectory
 CSVs, and a `results.csv` summary (goals reached, behavior orders, first-goal
 entropy) are written under the configured `output_folder`, or under the
 client checkpoint's `rollouts/` directory when unset.
+
+## Citation
+
+If you use this benchmark, please cite the original environment:
+
+```bibtex
+@article{lee2024behavior,
+    title={Behavior Generation with Latent Actions},
+    author={Lee, Seungjae and Wang, Yibin and Etukuru, Haritheja and Kim, H Jin and Shafiullah, Nur Muhammad Mahi and Pinto, Lerrel},
+    journal={arXiv preprint arXiv:2403.03181},
+    year={2024}
+}
+```
