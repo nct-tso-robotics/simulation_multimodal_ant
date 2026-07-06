@@ -1,0 +1,17 @@
+Multimodal Ant simulation server
+
+This repository contains a VersatIL socket-server wrapper for the multimodal
+Ant maze task.
+
+Upstream components:
+- `ant_sim/ant_maze_multimodal.py` and `ant_sim/assets/` are adapted from
+  jayLEE0301/vq_bet_official/envs/antenv (MIT license, Copyright (c) 2024
+  Seungjae Lee), ported from gym/mujoco_py to gymnasium and the modern
+  mujoco bindings. The adaptation also seeds the initial torso position from
+  the per-environment random state instead of the global numpy state.
+- The VQ-BeT ant environment itself builds on the ant maze environments from
+  google-research (efficient-hrl / HIRO lineage).
+
+The repository-level Apache-2.0 license applies to VersatIL wrapper/adaptation
+code contributed here. Vendored simulator files retain their original
+upstream terms unless a file-level license states otherwise.

@@ -1,0 +1,7 @@
+name: multimodal_ant
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - uv
